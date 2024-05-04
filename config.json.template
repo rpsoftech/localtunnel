@@ -1,0 +1,10 @@
+{
+    "remote":"0.0.0.0",
+    "secret":"XXXXXXXXXXXXXXXX",
+    "ports":[
+        {
+            "remote":0,
+            "local":0
+        }
+    ]
+}

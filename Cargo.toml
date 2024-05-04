@@ -1,0 +1,25 @@
+[package]
+name = "localtunnel"
+version = "0.1.0"
+edition = "2021"
+authors = ["RP Softech <rpsoftechindia@gmail.com>"]
+description = "A modern, simple TCP tunnel in Rust that exposes local ports to a remote server, bypassing standard NAT connection firewalls."
+repository = "https://github.com/rpsoftech/localtunnel"
+keywords = ["network", "cli", "tunnel", "tcp"]
+categories = ["network-programming", "web-programming", "command-line-utilities"]
+
+[[bin]]
+name = "localtunnel"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bore-cli = "0.5.0"
+serde = { version = "1.0.104", features = ["derive"] }
+serde_json = "1.0.48"
+tokio = { version = "1.17.0", features = ["rt-multi-thread", "io-util", "macros", "net", "time"] }
+tokio-util = { version = "0.7.1", features = ["codec"] }
+tracing = "0.1.32"
+tracing-subscriber = "0.3.10"
+anyhow = { version = "1.0.56", features = ["backtrace"] }
